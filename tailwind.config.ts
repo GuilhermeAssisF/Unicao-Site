@@ -1,3 +1,5 @@
+// tailwind.config.ts
+
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -7,7 +9,7 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
+    extend: { // Manter a chave 'extend' para a v3
       colors: {
         'custom-amarelo': '#FADA7A',
         'custom-creme': '#FFFBDE',

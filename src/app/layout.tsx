@@ -1,7 +1,7 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import './global.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
