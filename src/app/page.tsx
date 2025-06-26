@@ -1,109 +1,104 @@
 // src/app/page.tsx
-import { createClient } from "@/prismicio";
-import { PrismicNextImage } from "@prismicio/next";
-import { PrismicRichText } from "@prismicio/react";
-import { Metadata } from "next";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Metadata } from 'next';
 
-// Define metadados para SEO, se desejar
 export const metadata: Metadata = {
-  title: "Adoção - Unicão | Encontre Seu Novo Amigo",
+    title: 'Início - Unicão | Lar para Animais Domésticos',
 };
 
-// A página agora é um componente async, permitindo o uso de 'await' para buscar dados
-export default async function AdocaoPage() {
-  // 1. Cria um cliente Prismic para se conectar à API
-  const client = createClient();
-
-  // 2. Busca todos os documentos do tipo 'animal'
-  // O Prismic retorna os documentos dentro de um array 'results'
-  const animais = await client.getAllByType("animal");
-
+export default function HomePage() {
   return (
     <>
-      {/* Seção de Adoção */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-center text-custom-azul-escuro mb-6">
-            Encontre Seu Novo Melhor Amigo!
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-custom-azul-medio to-custom-azul-escuro text-white py-20 px-4 md:py-32 overflow-hidden">
+        {/* Background Image/Overlay */}
+        <div className="absolute inset-0">
+          <Image 
+            src="/img/hero-background.jpg" // Coloque sua imagem em public/img/
+            alt="Cão e gato juntos, simbolizando adoção" 
+            layout="fill" 
+            objectFit="cover" 
+            className="opacity-20"
+            priority
+          />
+          <div className="absolute inset-0 bg-black opacity-30"></div>
+        </div>
+        <div className="relative container mx-auto text-center z-10">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+            Transforme Vidas: Adote um Amigo Peludo!
           </h1>
-          <p className="text-lg text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-            Todos os nossos animais estão castrados, vacinados e vermifugados,
-            prontos para receber e dar muito amor. Conheça cada um deles!
+          <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90">
+            Conheça a Unicão: Dedicados a Resgatar, Cuidar e Encontrar Lares Cheios de Carinho.
           </p>
-
-          {/* Grid de Animais - Agora dinâmico! */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {/* 3. Mapeia o array 'animais' e renderiza um card para cada um */}
-            {animais.map((animal) => {
-              // Verificação de segurança: Se o documento estiver incompleto no Prismic, ele não será renderizado, evitando que o site quebre.
-              if (!animal || !animal.data || !animal.data.nome) {
-                return null;
-              }
-
-              return (
-                <div
-                  key={animal.id} // Usa o ID único do documento Prismic como chave
-                  className="bg-custom-creme rounded-lg shadow-lg overflow-hidden border border-gray-200 flex flex-col"
-                >
-                  {/* Imagem do animal vinda do Prismic */}
-                  <div className="w-full h-56 relative">
-                    {/* Verificação de segurança para a imagem */}
-                    {animal.data.foto.url && (
-                        <PrismicNextImage
-                            field={animal.data.foto}
-                            alt={String(animal.data.nome) || "Foto de animal para adoção"}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            fill // Usa fill para preencher o container responsivamente
-                        />
-                    )}
-                  </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    {/* Nome do animal */}
-                    <h3 className="text-2xl font-bold text-custom-azul-escuro mb-2">
-                      {animal.data.nome}
-                    </h3>
-                    {/* Idade e Porte */}
-                    <p className="text-gray-600 text-sm mb-2">
-                      Idade: {animal.data.idade} | Porte: {animal.data.porte}
-                    </p>
-                    {/* Descrição - Usa PrismicRichText para renderizar texto formatado */}
-                    <div className="text-gray-700 mb-4 line-clamp-3 flex-grow">
-                      <PrismicRichText field={animal.data.descricao} />
-                    </div>
-                    {/* Botão de Ação */}
-                    <a
-                      href={`/animal/${animal.uid}`} // Link para uma futura página de detalhes
-                      className="block mt-auto bg-custom-amarelo hover:bg-yellow-300 text-custom-azul-escuro font-semibold py-3 px-4 rounded-full text-center transform hover:scale-105 transition-all duration-300"
-                    >
-                      Saiba Mais
-                    </a>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/doacoes" className="bg-custom-amarelo hover:bg-yellow-300 text-custom-azul-medio font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 text-lg">
+              Quero Adotar um Animal
+            </Link>
+            <Link href="/sobre" className="bg-transparent hover:bg-white hover:text-custom-azul-escuro text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 text-lg border-2 border-custom-amarelo">
+              Saiba Mais Sobre Nós
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Seção de Chamada para Ação */}
-      <section className="bg-custom-creme py-16 px-4 text-center">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-custom-azul-escuro mb-6">
-            Interessado(a) em Adotar?
-          </h2>
-          <p className="text-lg text-gray-700 mb-8">
-            Nosso processo de adoção é simples e seguro, visando garantir que
-            cada animal encontre o lar perfeito. Clique abaixo para iniciar sua
-            jornada.
-          </p>
-          <a
-            href="#adoption-process"
-            className="bg-custom-azul-medio hover:bg-custom-azul-escuro text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 text-lg"
-          >
-            Entenda o Processo de Adoção
-          </a>
+      {/* Mission Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto text-center max-w-4xl">
+            <h2 className="text-4xl font-bold text-custom-azul-escuro mb-8">Nossa Missão: Um Lar para Cada Patinha.</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                Na <span className="font-semibold text-custom-azul-medio">Unicão</span>, acreditamos que todo animal merece uma segunda chance. Desde <span className="font-semibold">[Ano de Fundação]</span>, resgatamos, reabilitamos e encontramos lares amorosos para cães e gatos em situação de vulnerabilidade, combatendo o abandono e o sofrimento. Nosso compromisso é com o bem-estar e a dignidade de cada vida.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                <div className="bg-custom-creme p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 className="text-2xl font-semibold text-custom-azul-escuro mb-2">Mais de [X]</h3>
+                    <p className="text-gray-600">Animais Resgatados</p>
+                </div>
+                <div className="bg-custom-creme p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 className="text-2xl font-semibold text-custom-azul-escuro mb-2">[Y]</h3>
+                    <p className="text-gray-600">Adoções Realizadas</p>
+                </div>
+                <div className="bg-custom-creme p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 className="text-2xl font-semibold text-custom-azul-escuro mb-2">[Z]+</h3>
+                    <p className="text-gray-600">Voluntários Engajados</p>
+                </div>
+            </div>
         </div>
       </section>
+
+      {/* Testimonials/Success Stories Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto text-center max-w-5xl">
+            <h2 className="text-4xl font-bold text-custom-azul-escuro mb-12">Histórias que Aquecem o Coração.</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Testimonial 1 */}
+                <div className="bg-custom-creme p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
+                    <Image src="/img/pessoa1.jpg" alt="Foto da pessoa 1" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                    <p className="italic text-gray-700 mb-4">
+                        "Adotar o Tobias foi a melhor decisão da minha vida! A equipe da Unicão foi incrível em todo o processo."
+                    </p>
+                    <p className="font-semibold text-custom-azul-medio">- Maria S., Tutora do Tobias</p>
+                </div>
+                {/* Testimonial 2 */}
+                <div className="bg-custom-creme p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
+                    <Image src="/img/pessoa2.jpg" alt="Foto da pessoa 2" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                    <p className="italic text-gray-700 mb-4">
+                        "O trabalho da ONG é essencial. Sou voluntário há um ano e vejo a transformação na vida de tantos animais."
+                    </p>
+                    <p className="font-semibold text-custom-azul-medio">- João P., Voluntário</p>
+                </div>
+                {/* Testimonial 3 */}
+                <div className="bg-custom-creme p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
+                    <Image src="/img/pessoa3.jpg" alt="Foto da pessoa 3" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                    <p className="italic text-gray-700 mb-4">
+                        "Minha gatinha Luna me trouxe tanta alegria. A Unicão fez um trabalho maravilhoso em resgatá-la e encontrar um lar para ela."
+                    </p>
+                    <p className="font-semibold text-custom-azul-medio">- Ana L., Tutora da Luna</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
     </>
   );
 }
