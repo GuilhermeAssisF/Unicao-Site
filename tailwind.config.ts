@@ -12,7 +12,7 @@ const config: Config = {
     extend: { // Manter a chave 'extend' para a v3
       colors: {
         'custom-amarelo': '#FADA7A',
-        'custom-creme': '#FFFBDE',
+        'custom-creme': '#EAEFEF',
         'custom-azul-medio': '#0D5EA6',
         'custom-azul-escuro': '#0065F8',
       },
