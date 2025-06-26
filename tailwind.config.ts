@@ -1,0 +1,21 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'custom-amarelo': '#FADA7A',
+        'custom-creme': '#FFFBDE',
+        'custom-azul-medio': '#0D5EA6',
+        'custom-azul-escuro': '#0065F8',
+      },
+    },
+  },
+  plugins: [],
+}
+export default config
