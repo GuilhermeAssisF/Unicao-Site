@@ -46,39 +46,39 @@ export default function SobrePage() {
       </section>
 
       {/* Seção Nossos Projetos */}
-      <section className="py-16 bg-custom-creme">
+      <section className="py-16 bg-custom-azul-medio">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-          <h2 className="text-4xl font-bold text-custom-azul-escuro text-center mb-12">Nossos Projetos</h2>
+          <h2 className="text-4xl font-bold text-white text-center mb-12">Nossos Projetos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             {/* Project Card 1 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+            <div className="bg-custom-amarelo rounded-lg shadow-lg overflow-hidden border border-gray-200">
                 <Image src="/img/evento-adocao.jpg" alt="Evento de adoção de animais" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
                 <div className="p-6">
-                    <h3 className="text-2xl font-bold text-custom-azul-escuro mb-2">Eventos de Adoção</h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h3 className="text-2xl font-bold text-custom-azul-medio mb-2">Eventos de Adoção</h3>
+                    <p className="text-custom-azul-medio leading-relaxed">
                         Realizamos eventos regulares para conectar nossos animais resgatados com famílias amorosas, garantindo adoções responsáveis.
                     </p>
                 </div>
             </div>
 
             {/* Project Card 2 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+            <div className="bg-custom-amarelo rounded-lg shadow-lg overflow-hidden border border-gray-200">
                 <Image src="/img/resgate-animais.jpg" alt="Voluntários resgatando animais" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
                 <div className="p-6">
-                    <h3 className="text-2xl font-bold text-custom-azul-escuro mb-2">Resgate e Reabilitação</h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h3 className="text-2xl font-bold text-custom-azul-medio mb-2">Resgate e Reabilitação</h3>
+                    <p className="text-custom-azul-medio leading-relaxed">
                         Nossa equipe atua no resgate de animais em situação de risco, providenciando cuidados veterinários e reabilitação.
                     </p>
                 </div>
             </div>
 
             {/* Project Card 3 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+            <div className="bg-custom-amarelo rounded-lg shadow-lg overflow-hidden border border-gray-200">
                 <Image src="/img/conscientizacao.jpg" alt="Voluntário conscientizando a comunidade" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
                 <div className="p-6">
-                    <h3 className="text-2xl font-bold text-custom-azul-escuro mb-2">Campanhas de Conscientização</h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h3 className="text-2xl font-bold text-custom-azul-medio mb-2">Campanhas de Conscientização</h3>
+                    <p className="text-custom-azul-medio leading-relaxed">
                         Promovemos a educação sobre a posse responsável, castração e os direitos dos animais em escolas e comunidades.
                     </p>
                 </div>
@@ -95,35 +95,35 @@ export default function SobrePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 
                 {/* Team Member/Volunteer Card 1 */}
-                <div className="flex flex-col items-center p-6 bg-custom-creme rounded-lg shadow-md">
+                <div className="flex flex-col items-center p-6 bg-custom-azul-escuro rounded-lg shadow-md">
                     <Image src="/img/joao.jpg" alt="Foto de João Silva" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
                     <h3 className="text-xl font-semibold text-custom-azul-escuro">João Silva</h3>
-                    <p className="text-gray-600 text-sm mb-2">Presidente da ONG</p>
-                    <p className="text-gray-700 text-center text-sm">Apaixonado por animais, lidera nossa equipe com dedicação e visão.</p>
+                    <p className="text-custom-amarelo text-sm mb-2">Presidente da ONG</p>
+                    <p className="text-white text-center text-sm">Apaixonado por animais, lidera nossa equipe com dedicação e visão.</p>
                 </div>
 
                 {/* Team Member/Volunteer Card 2 */}
-                <div className="flex flex-col items-center p-6 bg-custom-creme rounded-lg shadow-md">
+                <div className="flex flex-col items-center p-6 bg-custom-azul-escuro rounded-lg shadow-md">
                     <Image src="/img/maria.jpg" alt="Foto de Maria Souza" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
                     <h3 className="text-xl font-semibold text-custom-azul-escuro">Maria Souza</h3>
-                    <p className="text-gray-600 text-sm mb-2">Coordenadora de Adoções</p>
-                    <p className="text-gray-700 text-center text-sm">Garante que cada animal encontre um lar seguro e amoroso.</p>
+                    <p className="text-custom-amarelo text-sm mb-2">Coordenadora de Adoções</p>
+                    <p className="text-white text-center text-sm">Garante que cada animal encontre um lar seguro e amoroso.</p>
                 </div>
 
                 {/* Team Member/Volunteer Card 3 */}
-                <div className="flex flex-col items-center p-6 bg-custom-creme rounded-lg shadow-md">
+                <div className="flex flex-col items-center p-6 bg-custom-azul-escuro rounded-lg shadow-md">
                     <Image src="/img/ana.jpg" alt="Foto de Ana Lima" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
                     <h3 className="text-xl font-semibold text-custom-azul-escuro">Ana Lima</h3>
-                    <p className="text-gray-600 text-sm mb-2">Voluntária Destaque</p>
-                    <p className="text-gray-700 text-center text-sm">Dedica horas cuidando e brincando com nossos animais diariamente.</p>
+                    <p className="text-custom-amarelo text-sm mb-2">Voluntária Destaque</p>
+                    <p className="text-white text-center text-sm">Dedica horas cuidando e brincando com nossos animais diariamente.</p>
                 </div>
 
                 {/* Team Member/Volunteer Card 4 */}
-                <div className="flex flex-col items-center p-6 bg-custom-creme rounded-lg shadow-md">
+                <div className="flex flex-col items-center p-6 bg-custom-azul-escuro rounded-lg shadow-md">
                     <Image src="/img/carlos.jpg" alt="Foto de Carlos Santos" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
                     <h3 className="text-xl font-semibold text-custom-azul-escuro">Carlos Santos</h3>
-                    <p className="text-gray-600 text-sm mb-2">Veterinário Voluntário</p>
-                    <p className="text-gray-700 text-center text-sm">Responsável pela saúde e bem-estar de todos os nossos resgatados.</p>
+                    <p className="text-custom-amarelo text-sm mb-2">Veterinário Voluntário</p>
+                    <p className="text-white text-center text-sm">Responsável pela saúde e bem-estar de todos os nossos resgatados.</p>
                 </div>
             </div>
 

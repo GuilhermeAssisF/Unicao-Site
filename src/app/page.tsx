@@ -15,8 +15,8 @@ export default function HomePage() {
         {/* Background Image/Overlay */}
         <div className="absolute inset-0">
           <Image 
-            src="/img/hero-background.jpg" // Coloque sua imagem em public/img/
-            alt="Cão e gato juntos, simbolizando adoção" 
+            src="/img/candinha.jpg" // Coloque sua imagem em public/img/
+            alt="Foto da Candinha" 
             layout="fill" 
             objectFit="cover" 
             className="opacity-20"
@@ -50,47 +50,47 @@ export default function HomePage() {
                 Na <span className="font-semibold text-custom-azul-medio">Unicão</span>, acreditamos que todo animal merece uma segunda chance. Desde <span className="font-semibold">[Ano de Fundação]</span>, resgatamos, reabilitamos e encontramos lares amorosos para cães e gatos em situação de vulnerabilidade, combatendo o abandono e o sofrimento. Nosso compromisso é com o bem-estar e a dignidade de cada vida.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-                <div className="bg-custom-creme p-6 rounded-lg shadow-md flex flex-col items-center">
-                    <h3 className="text-2xl font-semibold text-custom-azul-escuro mb-2">Mais de [X]</h3>
-                    <p className="text-gray-600">Animais Resgatados</p>
+                <div className="bg-custom-azul-medio p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 className="text-2xl font-semibold text-white mb-2">Mais de [X]</h3>
+                    <p className="text-white/90">Animais Resgatados</p>
                 </div>
-                <div className="bg-custom-creme p-6 rounded-lg shadow-md flex flex-col items-center">
-                    <h3 className="text-2xl font-semibold text-custom-azul-escuro mb-2">[Y]</h3>
-                    <p className="text-gray-600">Adoções Realizadas</p>
+                <div className="bg-custom-azul-medio p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 className="text-2xl font-semibold text-white mb-2">[Y]</h3>
+                    <p className="text-white/90">Adoções Realizadas</p>
                 </div>
-                <div className="bg-custom-creme p-6 rounded-lg shadow-md flex flex-col items-center">
-                    <h3 className="text-2xl font-semibold text-custom-azul-escuro mb-2">[Z]+</h3>
-                    <p className="text-gray-600">Voluntários Engajados</p>
+                <div className="bg-custom-azul-medio p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 className="text-2xl font-semibold text-white mb-2">[Z]+</h3>
+                    <p className="text-white/90">Voluntários Engajados</p>
                 </div>
             </div>
         </div>
       </section>
 
       {/* Testimonials/Success Stories Section */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-custom-azul-escuro">
         <div className="container mx-auto text-center max-w-5xl">
-            <h2 className="text-4xl font-bold text-custom-azul-escuro mb-12">Histórias que Aquecem o Coração.</h2>
+            <h2 className="text-4xl font-bold text-white mb-12">Histórias que Aquecem o Coração.</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Testimonial 1 */}
-                <div className="bg-custom-creme p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
+                <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
                     <Image src="/img/pessoa1.jpg" alt="Foto da pessoa 1" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
-                    <p className="italic text-gray-700 mb-4">
+                    <p className="italic font-bold text-gray-700 mb-4">
                         "Adotar o Tobias foi a melhor decisão da minha vida! A equipe da Unicão foi incrível em todo o processo."
                     </p>
                     <p className="font-semibold text-custom-azul-medio">- Maria S., Tutora do Tobias</p>
                 </div>
                 {/* Testimonial 2 */}
-                <div className="bg-custom-creme p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
+                <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
                     <Image src="/img/pessoa2.jpg" alt="Foto da pessoa 2" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
-                    <p className="italic text-gray-700 mb-4">
+                    <p className="italic font-bold text-gray-700 mb-4">
                         "O trabalho da ONG é essencial. Sou voluntário há um ano e vejo a transformação na vida de tantos animais."
                     </p>
                     <p className="font-semibold text-custom-azul-medio">- João P., Voluntário</p>
                 </div>
                 {/* Testimonial 3 */}
-                <div className="bg-custom-creme p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
+                <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
                     <Image src="/img/pessoa3.jpg" alt="Foto da pessoa 3" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
-                    <p className="italic text-gray-700 mb-4">
+                    <p className="italic font-bold text-gray-700 mb-4">
                         "Minha gatinha Luna me trouxe tanta alegria. A Unicão fez um trabalho maravilhoso em resgatá-la e encontrar um lar para ela."
                     </p>
                     <p className="font-semibold text-custom-azul-medio">- Ana L., Tutora da Luna</p>
