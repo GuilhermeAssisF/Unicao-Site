@@ -42,7 +42,6 @@ export default async function AdocaoPage() {
                     {animal.data.foto.url && (
                       <PrismicNextImage
                         field={animal.data.foto}
-                        alt={(animal.data.nome)}
                         // Efeito de zoom na imagem ao passar o mouse
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         fill
