@@ -38,7 +38,7 @@ export default async function AdocaoPage() {
                   // ALTERAÇÃO 1: Adicionada borda amarela e um efeito de sombra mais sutil
                   className="bg-custom-azul-card rounded-lg shadow-lg overflow-hidden border-4 border-yellow-300 flex flex-col group"
                 >
-                  <div className="w-full h-56 relative overflow-hidden">
+                  <div className="w-full h-72 relative overflow-hidden">
                     {animal.data.foto.url && (
                       <PrismicNextImage
                         field={animal.data.foto}
