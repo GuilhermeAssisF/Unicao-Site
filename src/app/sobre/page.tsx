@@ -26,7 +26,7 @@ export default function SobrePage() {
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="md:w-1/2">
               <Image 
-                src="/img/equipe-unicao.jpg"
+                src="/img/logo.png"
                 alt="Equipe da ONG com animais" 
                 width={800} 
                 height={600}
@@ -53,7 +53,7 @@ export default function SobrePage() {
             
             {/* Project Card 1 */}
             <div className="bg-custom-amarelo rounded-lg shadow-lg overflow-hidden border border-gray-200">
-                <Image src="/img/evento-adocao.jpg" alt="Evento de adoção de animais" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
+                <Image src="/img/cachorros_caixadagua.jpg" alt="Evento de adoção de animais" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
                 <div className="p-6">
                     <h3 className="text-2xl font-bold text-custom-azul-medio mb-2">Eventos de Adoção</h3>
                     <p className="text-custom-azul-medio leading-relaxed">
@@ -64,7 +64,7 @@ export default function SobrePage() {
 
             {/* Project Card 2 */}
             <div className="bg-custom-amarelo rounded-lg shadow-lg overflow-hidden border border-gray-200">
-                <Image src="/img/resgate-animais.jpg" alt="Voluntários resgatando animais" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
+                <Image src="/img/gatos_sacola.jpg" alt="Voluntários resgatando animais" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
                 <div className="p-6">
                     <h3 className="text-2xl font-bold text-custom-azul-medio mb-2">Resgate e Reabilitação</h3>
                     <p className="text-custom-azul-medio leading-relaxed">
@@ -75,7 +75,7 @@ export default function SobrePage() {
 
             {/* Project Card 3 */}
             <div className="bg-custom-amarelo rounded-lg shadow-lg overflow-hidden border border-gray-200">
-                <Image src="/img/conscientizacao.jpg" alt="Voluntário conscientizando a comunidade" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
+                <Image src="/img/conscientiza.jpg" alt="Voluntário conscientizando a comunidade" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
                 <div className="p-6">
                     <h3 className="text-2xl font-bold text-custom-azul-medio mb-2">Campanhas de Conscientização</h3>
                     <p className="text-custom-azul-medio leading-relaxed">
@@ -129,7 +129,7 @@ export default function SobrePage() {
 
             <div className="mt-12">
                 <h3 className="text-3xl font-bold text-custom-azul-escuro mb-6">Junte-se à Nossa Causa!</h3>
-                <a href="#contato-voluntario" className="bg-custom-azul-medio hover:bg-custom-azul-escuro text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 text-lg">
+                <a href="https://wa.me/5535999883004" target="_blank" className="bg-custom-azul-medio hover:bg-custom-azul-escuro text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 text-lg">
                     Seja um Voluntário!
                 </a>
             </div>

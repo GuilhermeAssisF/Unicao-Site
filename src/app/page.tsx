@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import DonationSection from '@/components/DonationSection'; // Importa o novo componente
 
 export const metadata: Metadata = {
     title: 'Início - Unicão | Lar para Animais Domésticos',
@@ -12,10 +13,9 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-custom-azul-medio to-custom-azul-escuro text-white py-20 px-4 md:py-32 overflow-hidden">
-        {/* Background Image/Overlay */}
         <div className="absolute inset-0">
           <Image 
-            src="/img/candinha.jpg" // Coloque sua imagem em public/img/
+            src="/img/candinha.jpg"
             alt="Foto da Candinha" 
             layout="fill" 
             objectFit="cover" 
@@ -51,18 +51,22 @@ export default function HomePage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
                 <div className="bg-custom-azul-medio p-6 rounded-lg shadow-md flex flex-col items-center">
-                    <h3 className="text-2xl font-semibold text-white mb-2">Mais de 50</h3>
+                    <h3 className="text-2xl font-semibold text-white mb-2">Mais de 500</h3>
                     <p className="text-white/90">Animais Resgatados</p>
                 </div>
                 <div className="bg-custom-azul-medio p-6 rounded-lg shadow-md flex flex-col items-center">
-                    <h3 className="text-2xl font-semibold text-white mb-2">42</h3>
+                    <h3 className="text-2xl font-semibold text-white mb-2">800</h3>
                     <p className="text-white/90">Adoções Realizadas</p>
                 </div>
                 <div className="bg-custom-azul-medio p-6 rounded-lg shadow-md flex flex-col items-center">
-                    <h3 className="text-2xl font-semibold text-white mb-2">7+</h3>
+                    <h3 className="text-2xl font-semibold text-white mb-2">80+</h3>
                     <p className="text-white/90">Voluntários Engajados</p>
                 </div>
             </div>
+            
+            {/* Renderiza o componente de doação interativo */}
+            <DonationSection />
+
         </div>
       </section>
 
@@ -99,6 +103,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Location Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl text-center">
+          
+          {/* Título Centralizado */}
+          <h2 className="text-4xl font-bold text-custom-azul-escuro mb-10">
+            Nossa Localização
+          </h2>
+
+          {/* Mapa Embed Centralizado e Maior */}
+          <div className="w-full max-w-5xl mx-auto h-[400px] rounded-lg shadow-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3517.9278594467587!2d-45.927935!3d-21.9325188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca37b0a62c4149%3A0x5ba94f8f5690428b!2zU8OjbyBKb8OjbyBkYSBNYXRh!5e1!3m2!1spt-BR!2sbr!4v1752588859631!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização da Unicão"
+            ></iframe>
+          </div>
+          
+        </div>
+      </section>
     </>
   );
 }

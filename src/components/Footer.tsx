@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
     return (
@@ -14,14 +16,19 @@ export default function Footer() {
                 </div>
                 <div>
                     <h3 className="text-xl font-bold mb-4 text-yellow-400">Contato</h3>
-                    <p className="mb-2 text-white/80">Email: contato@unicao.org.br</p>
-                    <p className="mb-2 text-white/80">Telefone: (XX) XXXX-XXXX</p>
-                    <p className="mb-2 text-white/80">Endereço: Rua dos Animais, 123 - Cidade, Estado</p>
+                    <p className="mb-2 text-white/80">Faça uma doação PIX: 29.698.652/0001.23</p>
+                    <a href="https://wa.me/5535999883004" target="_blank"><p className="mb-2 text-white/80">Telefone: (35) 99988-3004</p></a>
+                    <p className="mb-2 text-white/80">Endereço: 37568-000 - São João da Mata, Minas Gerais</p>
                 </div>
                 <div>
                     <h3 className="text-xl font-bold mb-4 text-yellow-400">Redes Sociais</h3>
                     <div className="flex justify-center md:justify-start gap-4">
-                        {/* Ícones... */}
+                        <a href="https://www.instagram.com/ong.unicao/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white/80 hover:text-white transition-colors duration-300">
+                            <FontAwesomeIcon icon={faInstagram} size="2x" />
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100013300443979" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white/80 hover:text-white transition-colors duration-300">
+                            <FontAwesomeIcon icon={faFacebook} size="2x" />
+                        </a>
                     </div>
                 </div>
             </div>
