@@ -77,7 +77,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Testimonial 1 */}
                 <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
-                    <Image src="/img/pessoa1.jpg" alt="Foto da pessoa 1" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                    <Image src="/img/depoimento1.jpg" alt="Foto da pessoa 1" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
                     <p className="italic font-bold text-gray-700 mb-4">
                         &quot;Adotar o Tobias foi a melhor decisão da minha vida! A equipe da Unicão foi incrível em todo o processo.&quot;
                     </p>
@@ -85,15 +85,15 @@ export default function HomePage() {
                 </div>
                 {/* Testimonial 2 */}
                 <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
-                    <Image src="/img/pessoa2.jpg" alt="Foto da pessoa 2" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                    <Image src="/img/depoimento2.jpg" alt="Foto da pessoa 2" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
                     <p className="italic font-bold text-gray-700 mb-4">
-                        &quot;O trabalho da ONG é essencial. Sou voluntário há um ano e vejo a transformação na vida de tantos animais.&quot;
+                        &quot;Quando adotei o Thor, minha vida mudou. Ele chegou tímido, com aquele olhar doce, como se agradecesse por estar finalmente seguro.&quot;
                     </p>
                     <p className="font-semibold text-custom-azul-medio">- João P., Voluntário</p>
                 </div>
                 {/* Testimonial 3 */}
                 <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
-                    <Image src="/img/pessoa3.jpg" alt="Foto da pessoa 3" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+                    <Image src="/img/depoimento3.jpg" alt="Foto da pessoa 3" width={100} height={100} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
                     <p className="italic font-bold text-gray-700 mb-4">
                         &quot;Minha gatinha Luna me trouxe tanta alegria. A Unicão fez um trabalho maravilhoso em resgatá-la e encontrar um lar para ela.&quot;
                     </p>

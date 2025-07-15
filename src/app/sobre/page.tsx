@@ -64,7 +64,7 @@ export default function SobrePage() {
 
             {/* Project Card 2 */}
             <div className="bg-custom-amarelo rounded-lg shadow-lg overflow-hidden border border-gray-200">
-                <Image src="/img/gatos_sacola.jpg" alt="Voluntários resgatando animais" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
+                <Image src="/img/resgate.png" alt="Voluntários resgatando animais" width={600} height={400} className="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
                 <div className="p-6">
                     <h3 className="text-2xl font-bold text-custom-azul-medio mb-2">Resgate e Reabilitação</h3>
                     <p className="text-custom-azul-medio leading-relaxed">
@@ -90,38 +90,30 @@ export default function SobrePage() {
 
       {/* Seção Nossa Equipe */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
             <h2 className="text-4xl font-bold text-custom-azul-escuro mb-12">Nossa Equipe e Voluntários</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 
                 {/* Team Member/Volunteer Card 1 */}
                 <div className="flex flex-col items-center p-6 bg-custom-azul-escuro rounded-lg shadow-md">
-                    <Image src="/img/joao.jpg" alt="Foto de João Silva" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
-                    <h3 className="text-xl font-semibold text-custom-azul-escuro">João Silva</h3>
+                    <Image src="/img/presidente.jpg" alt="Foto de Silvania" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
+                    <h3 className="text-xl font-semibold text-custom-amarelo">Silvânia Carmo</h3>
                     <p className="text-custom-amarelo text-sm mb-2">Presidente da ONG</p>
                     <p className="text-white text-center text-sm">Apaixonado por animais, lidera nossa equipe com dedicação e visão.</p>
                 </div>
 
                 {/* Team Member/Volunteer Card 2 */}
                 <div className="flex flex-col items-center p-6 bg-custom-azul-escuro rounded-lg shadow-md">
-                    <Image src="/img/maria.jpg" alt="Foto de Maria Souza" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
-                    <h3 className="text-xl font-semibold text-custom-azul-escuro">Maria Souza</h3>
-                    <p className="text-custom-amarelo text-sm mb-2">Coordenadora de Adoções</p>
-                    <p className="text-white text-center text-sm">Garante que cada animal encontre um lar seguro e amoroso.</p>
-                </div>
-
-                {/* Team Member/Volunteer Card 3 */}
-                <div className="flex flex-col items-center p-6 bg-custom-azul-escuro rounded-lg shadow-md">
-                    <Image src="/img/ana.jpg" alt="Foto de Ana Lima" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
-                    <h3 className="text-xl font-semibold text-custom-azul-escuro">Ana Lima</h3>
-                    <p className="text-custom-amarelo text-sm mb-2">Voluntária Destaque</p>
+                    <Image src="/img/vicepresidente.jpg" alt="Foto de Deliane" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
+                    <h3 className="text-xl font-semibold text-custom-amarelo">Deliane</h3>
+                    <p className="text-custom-amarelo text-sm mb-2">Vice Presidente</p>
                     <p className="text-white text-center text-sm">Dedica horas cuidando e brincando com nossos animais diariamente.</p>
                 </div>
 
                 {/* Team Member/Volunteer Card 4 */}
                 <div className="flex flex-col items-center p-6 bg-custom-azul-escuro rounded-lg shadow-md">
-                    <Image src="/img/carlos.jpg" alt="Foto de Carlos Santos" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
-                    <h3 className="text-xl font-semibold text-custom-azul-escuro">Carlos Santos</h3>
+                    <Image src="/img/veterinario.jpg" alt="Foto de Carlos Santos" width={150} height={150} className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-custom-amarelo"/>
+                    <h3 className="text-xl font-semibold text-custom-amarelo">Dr. Dennis</h3>
                     <p className="text-custom-amarelo text-sm mb-2">Veterinário Voluntário</p>
                     <p className="text-white text-center text-sm">Responsável pela saúde e bem-estar de todos os nossos resgatados.</p>
                 </div>
@@ -129,7 +121,7 @@ export default function SobrePage() {
 
             <div className="mt-12">
                 <h3 className="text-3xl font-bold text-custom-azul-escuro mb-6">Junte-se à Nossa Causa!</h3>
-                <a href="https://wa.me/5535999883004" target="_blank" className="bg-custom-azul-medio hover:bg-custom-azul-escuro text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 text-lg">
+                <a href="https://wa.me/5535999893004" target="_blank" className="bg-custom-azul-medio hover:bg-custom-azul-escuro text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 text-lg">
                     Seja um Voluntário!
                 </a>
             </div>

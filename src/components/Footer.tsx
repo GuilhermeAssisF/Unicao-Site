@@ -17,7 +17,7 @@ export default function Footer() {
                 <div>
                     <h3 className="text-xl font-bold mb-4 text-yellow-400">Contato</h3>
                     <p className="mb-2 text-white/80">Faça uma doação PIX: 29.698.652/0001.23</p>
-                    <a href="https://wa.me/5535999883004" target="_blank"><p className="mb-2 text-white/80">Telefone: (35) 99988-3004</p></a>
+                    <a href="https://wa.me/5535999893004" target="_blank"><p className="mb-2 text-white/80">Telefone: (35) 99989-3004</p></a>
                     <p className="mb-2 text-white/80">Endereço: 37568-000 - São João da Mata, Minas Gerais</p>
                 </div>
                 <div>

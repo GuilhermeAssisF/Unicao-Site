@@ -61,9 +61,9 @@ export default async function AdocaoPage() {
                       <PrismicRichText field={animal.data.descricao} />
                     </div>
                     <Link
-                      href="https://wa.me/5535999883004" target="_blank"
+                      href="https://wa.me/5535999893004" target="_blank"
                       // ALTERAÇÃO 3: Cores do botão atualizadas para a nova paleta
-                      className="block mt-auto bg-yellow-300 hover:bg-custom-azul-text-card text-custom-azul-medio hover:text-white font-semibold py-3 px-4 rounded-full text-center transform hover:scale-105 transition-all duration-300"
+                      className="block mt-auto bg-yellow-300 hover:bg-custom-azul-medio text-custom-azul-medio hover:text-white font-semibold py-3 px-4 rounded-full text-center transform hover:scale-105 transition-all duration-300"
                     >
                       Saiba Mais
                     </Link>
@@ -87,7 +87,7 @@ export default async function AdocaoPage() {
             jornada.
           </p>
           <a
-            href="https://wa.me/5535999883004" target="_blank" // Este link pode levar a uma seção na página "Sobre"
+            href="https://wa.me/5535999893004" target="_blank" // Este link pode levar a uma seção na página "Sobre"
             className="bg-yellow-300 hover:bg-custom-azul-medio hover:text-white text-custom-azul-medio font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 text-lg"
           >
             Entenda o Processo de Adoção
