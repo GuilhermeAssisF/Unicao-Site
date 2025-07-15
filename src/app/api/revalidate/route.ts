@@ -4,23 +4,20 @@ import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
-  const receivedSecret = request.headers.get("authorization");
-  const expectedSecret = `Bearer ${process.env.PRISMIC_REVALIDATE_SECRET}`;
+  // Ler o corpo da requisição para obter o segredo
+  const body = await request.json();
+  const receivedSecret = body.secret;
 
-  // Log para depuração - ISSO É O MAIS IMPORTANTE
-  console.log("Token Recebido:", receivedSecret);
-  console.log("Token Esperado:", expectedSecret);
+  // Comparar com a variável de ambiente (sem o "Bearer")
+  const expectedSecret = process.env.PRISMIC_REVALIDATE_SECRET;
 
-  // Compara os tokens
+  // Log para depuração
+  console.log("Segredo Recebido do Body:", receivedSecret);
+
+  // Compara os segredos
   if (receivedSecret !== expectedSecret) {
-    // Retorna uma mensagem de erro mais detalhada
     return NextResponse.json(
-      { 
-        message: "Token de autorização inválido.",
-        received: receivedSecret, // Devolve o que foi recebido
-        expected_length: expectedSecret.length, // Devolve o tamanho esperado
-        received_length: receivedSecret?.length || 0 // Devolve o tamanho recebido
-      },
+      { message: "Token de autorização inválido." },
       { status: 401 }
     );
   }
