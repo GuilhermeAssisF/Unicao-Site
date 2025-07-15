@@ -77,7 +77,7 @@ export default function HomePage() {
                     <p className="italic font-bold text-gray-700 mb-4">
                         &quot;Adotar o Tobias foi a melhor decisão da minha vida! A equipe da Unicão foi incrível em todo o processo.&quot;
                     </p>
-                    <p className="font-semibold text-custom-azul-medio">- Maria S., Tutora do Tobias</p>
+                    <p className="font-semibold text-custom-azul-medio">- Maria., Tutora do Tobias</p>
                 </div>
                 {/* Testimonial 2 */}
                 <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-custom-amarelo">
